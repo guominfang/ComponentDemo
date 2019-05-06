@@ -20,7 +20,7 @@ public class NewsService implements INewsService {
     public Fragment newNewsDetailsFragment(FragmentManager fragmentManager, int viewId, Bundle bundle) {
         NewsDetailsFragment fragment = new NewsDetailsFragment();
         fragment.setArguments(bundle);
-        fragmentManager.beginTransaction().add(viewId,fragment).commit();
+        fragmentManager.beginTransaction().replace(viewId,fragment).commit();
         return fragment;
     }
 }
